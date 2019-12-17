@@ -1,0 +1,207 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin: 0;
+	font-family: 'Handlee', cursive;
+	text-align: center;
+}
+
+.banner-home {  
+	background-image: url("https://crazyaboutcurls.com/images/CAC01.jpg");
+	height: 700px;
+	background-size: cover;  
+	background-position: center; 
+	padding-top: 20px;
+}
+
+
+.banner-home h1 {
+	text-align: center;
+	font-size:  3em; 
+	margin-top: 25%;
+	color:  #ffffff;
+}
+
+#hamburger {
+	display: block;
+	position: fixed;
+	z-index: 1;
+	width: 30px;
+	height: auto;
+	top: 0px;
+	left: 0px;
+	padding: 5px;
+}
+
+#navMenu {
+	position: fixed;  /* menu not part of the regular block flow - overlapping content*/
+	top: 0; /* moves menu to top of the viewport */
+	left: 0; /* moves menu to far left */
+	background-color: rgba(168, 188, 206, .50);  /* transparent background at .9 */
+	height: 100%; /* makes menu cover full length */
+	overflow: hidden; /* whetever is outside menu div is hidden when menu is closed */
+	transition: 0.7s; /* slight delay animation when opens*/
+	width: 100%;
+	padding-top: 30px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #192C3C;
+	background-color: #C9C9D1;
+	display:  block; 	
+	align: center;
+	padding: 10px 0 10px 0;  
+	margin-bottom: 5px;  
+}
+
+nav ul li a:hover {
+	background-color:  #8EA0AE;
+}
+
+nav ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+.image-one { 
+	text-align: center;
+	padding: 0 20px;
+}
+
+.image-one > img {
+	border-radius: 20%;
+}
+
+
+.art-one-home {  
+	background-color:#8EA0AE;
+	margin: 20px 30px;
+}
+	
+.art-one-home-img { 
+	width: 100%;
+	height: 650px;
+	background-image: url("https://crazyaboutcurls.com/images/CAC07.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.art-text1 {
+	background-color: #ffffff;
+	border: #8EA0AE solid 2px;
+}
+
+.art-one-home h2 { 
+	color: #033;
+	font-size: 2em;
+}
+
+.art-one-home p { 
+	color: #ffffff; 	
+}
+
+.circle { 
+	width: 350px; 
+	height: 350px;
+	background-size: cover;
+	background-position: center;
+	border-radius: 100%;
+	margin: auto;
+}
+
+.art-two-home-img { 
+	background-image: url("https://crazyaboutcurls.com/images/CAC04.jpg");
+}
+
+.art-three-home-img { 
+	background-image: url("https://crazyaboutcurls.com/images/CAC08.jpg");
+}
+
+.footer-home {
+	height: 50px;
+	background-color: #004770;
+	color: #ffffff;
+	padding: 20px;
+}
+
+footer > span {
+	padding-right: 3%;
+	}
+
+
+@media screen and (min-width: 500px) {  /* if screen > 500px */
+
+	nav ul {
+		display: flex;      /* applies just to the ul and places everything inside ul on one line */
+	}	
+
+	nav ul li {
+		flex: 1;     		/* flex will divide width equally between each element between each element */
+		margin: 5px;		/* places a margin around each item */
+	}
+
+	#navMenu {
+		position: relative;  /* menu not part of the regular block flow - overlapping content*/
+		top: 0; /* moves menu to top of the viewport */
+		left: 0; /* moves menu to far left */
+		background-color: #ffffff; /* transparent background at .9 */
+		height: 100%; /* makes menu cover full length */
+		overflow: hidden; /* whetever is outside menu div is hidden when menu is closed */
+	}
+
+	#hamburger {
+		 display: none; 
+	}
+	
+	.feature-images {
+		display: flex;		/*Applied flex to the parents  */	
+		}
+	
+	.image-one {
+		flex: 1;			/* 1- means each div will have equal width  */
+		}
+		
+		
+	.flex-art-one-home {
+		display: flex;
+		}
+		
+	.art-one-home-img { 
+		width: 100%;
+		height: 650px;
+		background-image: url("https://crazyaboutcurls.com/images/CAC07.jpg");
+		background-size: cover;
+		background-position: center;
+		flex: 1;
+	}
+	
+	.art-text1 {
+		flex: 1;
+		background-color: #ffffff;
+		border: #8EA0AE solid 2px;
+	}
+	.art-text2 {
+		flex: 1;
+	}
+	
+	.art-one-home h2 { 
+		color: #033;
+		font-size: 2em;
+	}
+		
+	.art-one-home-img {
+		height: 80vh;  /* 50% of the entire view (height) top 50% bottom 50% */  
+		}
+		
+	.art-flex {
+		display: flex;
+		}
+		
+	.art-two-home, .art-three-home {
+		flex: 1;
+		}	
+}
+
+
